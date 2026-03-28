@@ -1,0 +1,141 @@
+.contact-page {
+  background: #fef9e6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Quicksand', 'Segoe UI', sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact-info, .contact-form {
+  flex: 1;
+  padding: 2rem;
+}
+
+.contact-info {
+  background: #fce4d6;
+  border-radius: 20px 0 0 20px;
+}
+
+.contact-info h2, .contact-form h2 {
+  margin-top: 0;
+  color: #b45f3b;
+}
+
+.contact-details p {
+  margin: 0.5rem 0;
+  color: #5a3e2b;
+}
+
+.support-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.link-btn {
+  background: #fff0e6;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  color: #b45f3b;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: left;
+}
+
+.link-btn:hover {
+  background: #ffe0d0;
+  transform: translateX(5px);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #b45f3b;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #f0cfbc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #b45f3b;
+  box-shadow: 0 0 0 2px rgba(180,95,59,0.2);
+}
+
+.send-btn {
+  background: #b45f3b;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 100%;
+}
+
+.send-btn:hover:not(:disabled) {
+  background: #9a4a2a;
+  transform: translateY(-2px);
+}
+
+.send-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.status.success {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+.status.error {
+  background: #fce4e4;
+  color: #c7362b;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-info {
+    border-radius: 20px 20px 0 0;
+  }
+}
