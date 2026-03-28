@@ -1,17 +1,16 @@
 import axios from 'axios';
 
 // ================= BASE URLs =================
-export const API_BASE_URL =
-  import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api/';
-
-export const MEDIA_BASE_URL = 'http://127.0.0.1:8000/media/';
-
-
 // export const API_BASE_URL =
-//   import.meta.env.VITE_API_URL || 'https://manimegalaipython.pythonanywhere.com/api/';
+//   import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api/';
 
-// export const MEDIA_BASE_URL =
-//   'https://manimegalaipython.pythonanywhere.com/media/';
+// export const MEDIA_BASE_URL = 'http://127.0.0.1:8000/media/';
+
+
+export const API_BASE_URL =
+  import.meta.env.VITE_API_URL || "https://manipraveen1.pythonanywhere.com/api/";
+
+export const MEDIA_BASE_URL =  "https://manipraveen1.pythonanywhere.com/";
 // ================= AXIOS INSTANCE =================
 const api = axios.create({
   baseURL: API_BASE_URL,
