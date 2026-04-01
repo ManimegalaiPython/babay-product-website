@@ -186,7 +186,7 @@ export default function Forum() {
 
   // ── Fetch forum groups from backend
   useEffect(() => {
-    fetch("http://localhost:8000/api/forum/groups/", { credentials: "include" })
+    fetch("https://manipraveen1.pythonanywhere.com/api/forum/groups/", { credentials: "include" })
       .then((r) => r.json())
       .then((data) => {
         setCategories(Array.isArray(data) && data.length > 0 ? data : FALLBACK_CATEGORIES);
