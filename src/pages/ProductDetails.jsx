@@ -4,7 +4,7 @@ import { fetchProductBySlug } from '../services/api';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 
-const API_BASE = 'https://manipraveen1.pythonanywhere.com/api/';
+const API_BASE = 'https://manipraveen1.pythonanywhere.com';
 
 const resolveImg = (src, fallbackSize = '400x400') =>
   !src
