@@ -3,7 +3,7 @@ import { useCart } from '../context/CartContext';
 import { useNavigate, Link } from 'react-router-dom';
 import './Cart.css';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = 'https://manipraveen1.pythonanywhere.com/api/';
 
 const resolveImg = (src) => {
   if (!src) return 'https://via.placeholder.com/80x80?text=No+Image';
