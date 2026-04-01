@@ -1,18 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { fetchProductBySlug, MEDIA_BASE_URL } from '../services/api'; // ✅ import MEDIA_BASE_URL from api.js
+import { fetchProductBySlug } from '../services/api';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 
-// ✅ FIXED: removed local API_BASE = 'http://localhost:8000' — now uses MEDIA_BASE_URL from api.js
-// This ensures images work in both dev and production automatically
+const API_BASE = 'http://localhost:8000';
 
 const resolveImg = (src, fallbackSize = '400x400') =>
   !src
     ? `https://via.placeholder.com/${fallbackSize}?text=No+Image`
     : src.startsWith('http')
     ? src
-    : `${MEDIA_BASE_URL}${src}`; // ✅ uses deployed URL, not localhost
+    : `${API_BASE}${src}`;
 
 const Stars = ({ rating = 0 }) => (
   <span style={{ color: '#f59e0b', fontSize: 15, letterSpacing: 1 }}>
