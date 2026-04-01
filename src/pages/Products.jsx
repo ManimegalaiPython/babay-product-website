@@ -3,7 +3,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import './Products.css';
 
-const API = 'http://localhost:8000/api';
+const API = 'https://manipraveen1.pythonanywhere.com/api/';
 
 const GENDERS      = ['Boy', 'Girl'];
 const AGE_GROUPS   = ['0-6 months', '7-12 months', 'Kids', 'Adults'];
